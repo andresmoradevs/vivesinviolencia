@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="10dp"
+    tools:context=".fragments.IntroFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <Button
+        android:visibility="gone"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/menu_bar"
+        android:backgroundTint="@android:color/holo_blue_bright"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ImageView
+        android:id="@+id/btnInformation"
+        android:layout_below="@+id/main_icon"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/btn_information"/>
+
+    <ImageView
+        android:id="@+id/btnChatWithUs"
+        android:layout_width="50dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/btnInformation"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/btn_chat_us"/>
+    <ImageView
+        android:id="@+id/btnRoutesAtention"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below
+            ="@+id/btnChatWithUs"
+        android:src="@drawable/btn_routes_atention"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+    <ImageView
+        android:id="@+id/btn"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/btn_agrstop"
+        android:layout_below="@+id/btnRoutesAtention"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/footer_splash"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-45dp"
+        android:elevation="100dp"
+        android:cropToPadding="true"
+        android:paddingTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illustration_people" />
+
+    <ImageView
+        android:id="@+id/footer_splash"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:elevation="2dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/splash_footer"/>
+
+</RelativeLayout>

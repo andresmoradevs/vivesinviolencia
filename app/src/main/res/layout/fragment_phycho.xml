@@ -1,14 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PhychoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_marginTop="10dp"
+    tools:context=".fragments.PhychoFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/menu_bar"
+        android:backgroundTint="@android:color/holo_blue_bright"/>
+
+    <ImageView
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="55dp"
+        android:elevation="1dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="230dp"
+        android:src="@drawable/phychological_violence_banner" />
 
-</FrameLayout>
+    <TextView
+        android:layout_marginTop="-40dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/title"
+        android:fontFamily="@fonts/kabut_hitam"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_below="@+id/iv_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Qué es la violencia psicológica?"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="11sp"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paragraph_psycho_violence"/>
+
+    <TextView
+        android:id="@+id/second_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@fonts/kabut_hitam"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/text"
+        android:text="@string/tipos_de_violencia_psicol_gica"/>
+
+    <TextView
+        android:id="@+id/firts_tag"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="30dp"
+        android:textColorHint="@color/white"
+        android:text="Manipulación"
+        android:layout_below="@+id/second_title"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/tag_one"/>
+
+    <TextView
+        android:id="@+id/second_tag"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_below="@+id/firts_tag"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/tag_two"
+        android:text="Humillar"/>
+
+    <TextView
+        android:id="@+id/third_tag"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_below="@+id/second_tag"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/tag_three"
+        android:text="Amenazas"/>
+
+    <TextView
+        android:id="@+id/four_tag"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_below="@+id/third_tag"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/tag_four"
+        android:text="Prohibición"/>
+
+    <TextView
+        android:id="@+id/five_tag"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-5dp"
+        android:layout_below="@+id/four_tag"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/tag_five"
+        android:text="Gaslighting"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/arrow_up"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="-30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/second_title"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/second_title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/graph_round_violence_psycho"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/footer_splash"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-48dp"
+        android:elevation="500dp"
+        android:cropToPadding="true"
+        android:paddingTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illustrated_strip" />
+
+    <ImageView
+        android:id="@+id/footer_splash"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:elevation="100dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/splash_footer"/>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package org.pastosalud.vivesinviolencia;
+package org.pastosalud.vivesinviolencia.models;
 
 public class Item {
     private final int iconResId;

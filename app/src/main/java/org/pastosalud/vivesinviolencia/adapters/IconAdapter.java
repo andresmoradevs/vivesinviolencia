@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.pastosalud.vivesinviolencia.Item;
+import org.pastosalud.vivesinviolencia.models.Item;
 import org.pastosalud.vivesinviolencia.R;
 
 import java.util.List;

@@ -1,18 +1,23 @@
-package org.pastosalud.vivesinviolencia;
+package org.pastosalud.vivesinviolencia.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import org.pastosalud.vivesinviolencia.models.Item;
+import org.pastosalud.vivesinviolencia.R;
 import org.pastosalud.vivesinviolencia.adapters.IconAdapter;
 
 import java.util.ArrayList;
@@ -22,6 +27,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private IconAdapter adapter;
     private List<Item> itemList;
+    private ImageView iconChat;
 
     @Nullable
     @Override
@@ -31,6 +37,7 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
+
         itemList = new ArrayList<>();
         itemList.add(new Item(R.drawable.psychological_violence_icon));
         itemList.add(new Item(R.drawable.pshysical_violence_icon));
@@ -38,6 +45,18 @@ public class HomeFragment extends Fragment {
         itemList.add(new Item(R.drawable.behavior_suicide_icon));
         itemList.add(new Item(R.drawable.negligence_icon));
         itemList.add(new Item(R.drawable.patriomonial_violence_icon));
+        iconChat = view.findViewById(R.id.chat_icon);
+        iconChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String phoneNumber = "+3216469661";
+
+                // abrir WhatsApp
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                sendIntent.setData(Uri.parse("https://api.whatsapp.com/send?phone=" + phoneNumber));
+                startActivity(sendIntent);
+            }
+        });
 
         adapter = new IconAdapter(itemList, new IconAdapter.OnItemClickListener() {
             @Override

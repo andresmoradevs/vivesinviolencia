@@ -1,10 +1,12 @@
-package org.pastosalud.vivesinviolencia;
+package org.pastosalud.vivesinviolencia.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import org.pastosalud.vivesinviolencia.R;
 
 public class SplashActivity extends AppCompatActivity {
 

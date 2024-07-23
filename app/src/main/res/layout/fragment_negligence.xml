@@ -1,14 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NegligenceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_marginTop="10dp"
+    tools:context=".fragments.SuicideFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/menu_bar"
+        android:backgroundTint="@android:color/holo_blue_bright"/>
+
+    <ImageView
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="55dp"
+        android:elevation="1dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="230dp"
+        android:src="@drawable/negligence_banner" />
 
-</FrameLayout>
+    <TextView
+        android:layout_marginTop="-55dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/titleNeglig"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:fontFamily="@fonts/kabut_hitam"
+        android:layout_below="@+id/iv_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negligencia"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/titleNeglig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_negl"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text2_negl"/>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/footer_splash"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-48dp"
+        android:elevation="500dp"
+        android:cropToPadding="true"
+        android:paddingTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illustrated_strip" />
+
+    <ImageView
+        android:id="@+id/footer_splash"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:elevation="100dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/splash_footer"/>
+
+</RelativeLayout>
