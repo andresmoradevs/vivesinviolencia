@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import org.pastosalud.vivesinviolencia.R;
+import org.pastosalud.vivesinviolencia.fragments.HomeFragment;
 import org.pastosalud.vivesinviolencia.fragments.IntroFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new IntroFragment())
+                    .replace(R.id.fragment_container, new HomeFragment())
                     .commit();
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
