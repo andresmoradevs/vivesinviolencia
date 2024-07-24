@@ -39,6 +39,9 @@ public class HomeFragment extends Fragment {
     private IconAdapter adapter;
     private List<Item> itemList;
     private ImageView iconChat;
+    private ImageView fb, instagram;
+    private static final String FACEBOOK_URL = "https://www.facebook.com/PastoSaludeSe?locale=es_LA";
+    private static final String FACEBOOK_PAGE_ID = "377389259132031";
 
     @Nullable
     @Override
@@ -56,6 +59,22 @@ public class HomeFragment extends Fragment {
         itemList.add(new Item(R.drawable.behavior_suicide_icon));
         itemList.add(new Item(R.drawable.negligence_icon));
         itemList.add(new Item(R.drawable.patriomonial_violence_icon));
+
+        fb = view.findViewById(R.id.fb_icon);
+        instagram = view.findViewById(R.id.instagram_icon);
+        fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFacebookPage();
+            }
+        });
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFacebookPage();
+            }
+        });
+
         iconChat = view.findViewById(R.id.chat_icon);
         iconChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +133,17 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+    private void openFacebookPage() {
+        Intent intent;
+        try {
+            getActivity().getPackageManager().getPackageInfo("com.facebook.katana", 0);
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/" + FACEBOOK_PAGE_ID));
+        } catch (Exception e) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FACEBOOK_URL));
+        }
+        startActivity(intent);
+    }
+
     private void showDocOptionsPopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage("Ya conoces las rutas de atención?")
