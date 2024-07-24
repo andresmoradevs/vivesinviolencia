@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:layout_marginTop="10dp">
 
-
     <ImageView
         android:id="@+id/main_icon"
         android:layout_width="180dp"
@@ -36,6 +35,28 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:src="@drawable/btn_chat_with_us"/>
+
+    <ImageView
+        android:id="@+id/fb_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="200dp"
+        android:elevation="500dp"
+        android:src="@drawable/logo_fb_blue" />
+
+    <ImageView
+        android:id="@+id/intagram_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="250dp"
+        android:layout_marginEnd="25dp"
+        android:elevation="500dp"
+        android:src="@drawable/logo_insta_bicolor" />
 
     <ImageView
         android:id="@+id/btnRoutesAtention"
