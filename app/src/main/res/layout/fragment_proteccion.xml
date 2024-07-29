@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SaludFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <ImageView
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ScrollView
+        android:layout_marginTop="-10dp"
+        android:id="@+id/scrollView"
+        android:elevation="900dp"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_icon">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="CTI"/>
+                <TextView
+                    android:id="@+id/tv_cti"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027244417"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/btnCti"
+                    android:layout_marginEnd="55dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="SIJIN"/>
+                <TextView
+                    android:id="@+id/tv_sijin"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3102692961"/>
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnSijin"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="FISCALIA"/>
+                <TextView
+                    android:id="@+id/tv_fiscalia"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3163768630"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnFiscalia"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="CAIVAS"/>
+
+                <TextView
+                    android:id="@+id/tv_caivas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:text="6014377630"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCaivas"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="MEDICINA LEGAL"/>
+
+                <TextView
+                    android:id="@+id/tv_mlegal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="6027202935"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/btnMedicinaLegal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

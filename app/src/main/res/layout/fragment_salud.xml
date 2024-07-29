@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SaludFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <ImageView
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ScrollView
+        android:layout_marginTop="-10dp"
+        android:id="@+id/scrollView"
+        android:elevation="900dp"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_icon">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Pasto Salud ESE"/>
+                <TextView
+                    android:id="@+id/tv_pastoeseppal"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027206284"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/btnPastoESEPPal"
+                    android:layout_marginEnd="55dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Hospital Local Civil"/>
+                <TextView
+                    android:id="@+id/tv_hlcivil"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3216469667"/>
+
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnHLCivil"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Hospital la Rosa"/>
+                <TextView
+                    android:id="@+id/tv_hlrosa"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027215942"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnHLRosa"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="C.S Lorenzo"/>
+
+                <TextView
+                    android:id="@+id/tv_cslorenzo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:text="6027209111"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCSLorenzo"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="C.S Tamasagra"/>
+
+                <TextView
+                    android:id="@+id/tv_cstamasagra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="6027230959"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/btnCSTamasagra"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Call Center"/>
+                <TextView
+                    android:id="@+id/tv_callcenter"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027244418 "/>
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCallCenter"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Ips Medfam Sede Aurora"/>
+                <TextView
+                    android:id="@+id/tv_medfamsaurora"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="11sp"
+                    android:text="6027244304"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnIpsMFamSAurora"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Ips Medfam Sede Fatima"/>
+                <TextView
+                    android:id="@+id/tv_medfamsfatima"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027244304 "/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnIpsMFamSFatima"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Ips Pasto Especialidades"/>
+                <TextView
+                    android:id="@+id/tv_ipspespc"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3009122855"/>
+
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnIPSPEspec"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Ips Sanidad Policia"/>
+                <TextView
+                    android:id="@+id/tv_ipsspolicia"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027316910"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnIpsSPolicia"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="IPS Clc N. Señora de Fátima"/>
+                <TextView
+                    android:id="@+id/tv_ipscnsdfatima"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027333630"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnIpsCNSDFatima"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Ips Clínica Hispanoamérica"/>
+                <TextView
+                    android:id="@+id/tv_clchispano"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027374465"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnClinicaHisp"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Clínica Cardioneurovascular Pabón"/>
+                <TextView
+                    android:id="@+id/tv_clccardiopabon"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text=" 3137248977"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnClinicaCardioPabon"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Hospital Infantil Los Angeles"/>
+                <TextView
+                    android:id="@+id/tv_hilangeles"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027336400"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnHILAngeles"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Hospital Universitario Departamental"/>
+                <TextView
+                    android:id="@+id/tv_hudepart"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text=" 6027333400"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnHUDepart"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Fundación Hospital San Pedro"/>
+                <TextView
+                    android:id="@+id/tv_fhspedro"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text=" 6027336000"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnFHSPedro"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="Centro Medico Valle De Atriz"/>
+                <TextView
+                    android:id="@+id/tv_cmvdatriz"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027231359"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCMVDAtriz"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

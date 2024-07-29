@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.JusticiaFragment">
+
+    <ImageView
+        android:id="@+id/main_icon"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:elevation="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_icon"/>
+
+    <ImageView
+        android:id="@+id/chat_icon"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:elevation="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/btn_chat_with_us"/>
+
+    <ScrollView
+        android:layout_marginTop="-10dp"
+        android:id="@+id/scrollView"
+        android:elevation="900dp"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_icon">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Comisaria tercera de Familia"/>
+                <TextView
+                    android:id="@+id/tv_ctfamilia"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3152059860"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/btnCTFamilia"
+                    android:layout_marginEnd="55dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Centro Zonal 1"/>
+                <TextView
+                    android:id="@+id/tv_cz1"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027374561"/>
+
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCZ1"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="Centro Zonal 2"/>
+                <TextView
+                    android:id="@+id/tv_cz2"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027374561"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnCZ2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="CAI MORASURCO"/>
+
+                <TextView
+                    android:id="@+id/tv_caimorasurco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:text="6027310201"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCaimorasurco"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="CAI DORADO"/>
+
+                <TextView
+                    android:id="@+id/tv_caidorado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="6027311446"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/btnCaiDorado"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="NIÑO JESUS DE PRAGA"/>
+                <TextView
+                    android:id="@+id/tv_njesusdepraga"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027217575"/>
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnNJdePraga"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="CAI ANGANOY "/>
+                <TextView
+                    android:id="@+id/tv_caiAnganoy"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="11sp"
+                    android:text="6027290510"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCaiAnganoy"
+                    android:layout_marginStart="25dp"
+                    android:layout_gravity="center"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="GENOY"/>
+                <TextView
+                    android:id="@+id/tv_genoy"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="3218431119"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnGenoy"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="CORAZON DE JESUS"/>
+                <TextView
+                    android:id="@+id/tv_cdjesus"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="200dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6027206905"/>
+
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnCDJesus"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:text="CAI BOMBONA"/>
+                <TextView
+                    android:id="@+id/tv_caibombona"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027228748"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="55dp"
+                    android:id="@+id/btnCaiBombona"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CAI SAN AGUSTIN"/>
+                <TextView
+                    android:id="@+id/tv_caisanagustin"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027228070"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCaiSAgustin"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CAI PLAZA DEL CARNAVAL"/>
+                <TextView
+                    android:id="@+id/tv_caipdcarnaval"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027202151"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCaidCarnval"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CAI OBRERO"/>
+                <TextView
+                    android:id="@+id/tv_caiobrero"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027208497"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCaiObrero"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CAI TAMASAGRA"/>
+                <TextView
+                    android:id="@+id/tv_caitama"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027228747"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCaiTama"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CAI GRANADA"/>
+                <TextView
+                    android:id="@+id/tv_caigranada"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027200575"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCaiGranada"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CATAMBUCO"/>
+                <TextView
+                    android:id="@+id/tv_catambuco"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="3218431138"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCatambumco"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="POPULAR "/>
+                <TextView
+                    android:id="@+id/tv_popular"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027206621"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnPopular"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="SANTA MONICA"/>
+                <TextView
+                    android:id="@+id/tv_smonica"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027316625"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnSMonica"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="POTRERILLO"/>
+                <TextView
+                    android:id="@+id/tv_potrerillo"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027201528"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnPotrerillo"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CHAMBU"/>
+                <TextView
+                    android:id="@+id/tv_chambu"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027214507"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnChambu"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="MIRAFLORES"/>
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/tv_miraflores"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027301295"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnMiraflores"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="CIUDAD DE PASTO"/>
+                <TextView
+                    android:id="@+id/tv_cpasto"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027301902"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnCPasto"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="SIMON BOLIVAR"/>
+                <TextView
+                    android:id="@+id/tv_sbolivar"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027202323"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnSBolivar"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="EL ENCANO"/>
+                <TextView
+                    android:id="@+id/tv_encano"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="3218431160"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnEncano"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:text="JAMONDINO"/>
+                <TextView
+                    android:id="@+id/tv_jamondino"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:text="6027301197"/>
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:id="@+id/btnJamondino"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icono_telefono_gris"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

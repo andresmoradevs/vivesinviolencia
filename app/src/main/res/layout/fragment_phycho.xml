@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:layout_marginTop="10dp"
     tools:context=".fragments.PhychoFragment">
 
     <ImageView
@@ -17,17 +15,6 @@
         android:layout_alignParentStart="true"
         android:scaleType="centerCrop"
         android:src="@drawable/main_icon"/>
-
-    <Button
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="15dp"
-        android:elevation="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="35dp"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/menu_bar"
-        android:backgroundTint="@android:color/holo_blue_bright"/>
 
     <ImageView
         android:id="@+id/chat_icon"
@@ -50,102 +37,183 @@
         android:layout_height="230dp"
         android:src="@drawable/phychological_violence_banner" />
 
-    <TextView
+    <ScrollView
         android:layout_marginTop="-40dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/title"
-        android:fontFamily="@fonts/kabut_hitam"
-        android:textStyle="bold"
-        android:textSize="35sp"
-        android:layout_below="@+id/iv_banner"
-        android:layout_width="wrap_content"
+        android:id="@+id/scrollView"
+        android:elevation="600dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Qué es la violencia psicológica?"/>
+        android:layout_below="@id/iv_banner"
+        android:layout_above="@id/footer_splash">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:textSize="11sp"
-        android:textAlignment="viewStart"
-        android:layout_below="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/paragraph_psycho_violence"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    <TextView
-        android:id="@+id/second_title"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@fonts/kabut_hitam"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/text"
-        android:text="@string/tipos_de_violencia_psicol_gica"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Qué es la violencia psicológica?"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/firts_tag"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="30dp"
-        android:textColorHint="@color/white"
-        android:text="Manipulación"
-        android:layout_below="@+id/second_title"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
-        android:backgroundTint="@color/tag_one"/>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraph_psycho_violence"
+                android:textSize="11sp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"/>
 
-    <TextView
-        android:id="@+id/second_tag"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-5dp"
-        android:layout_below="@+id/firts_tag"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
-        android:backgroundTint="@color/tag_two"
-        android:text="Humillar"/>
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Según la psicóloga Leonore Walker (1984), la violencia psicológica se define como: “El conjunto de comportamientos y actitudes que tienen por objeto: controlar, dominar, manipular y humillar a la pareja mediante el uso de la intimidación, el miedo, la vergüenza, la culpa y la negación”. "
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/tag_five"/>
 
-    <TextView
-        android:id="@+id/third_tag"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-5dp"
-        android:layout_below="@+id/second_tag"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
-        android:backgroundTint="@color/tag_three"
-        android:text="Amenazas"/>
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Walker, Leonore E. (1984). The battered woman syndrome. Springer Publishing Company."
+                android:textSize="11sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/tag_five"/>
 
-    <TextView
-        android:id="@+id/four_tag"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-5dp"
-        android:layout_below="@+id/third_tag"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
-        android:backgroundTint="@color/tag_four"
-        android:text="Prohibición"/>
+            <TextView
+                android:id="@+id/second_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipos de violencia psicológica"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/five_tag"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="-5dp"
-        android:layout_below="@+id/four_tag"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
-        android:backgroundTint="@color/tag_five"
-        android:text="Gaslighting"/>
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Amenazas\n- Chantajes\n- Emocionales\n- Humillación\n- Control\n- Insultos\n- Comparaciones\n- Descalificadoras\n- Gritos\n- Control de la imagen\n- Burlas\n- Críticas\n- Indiferencia"
+                android:textSize="11sp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"/>
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/arrow_up"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="-30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/second_title"/>
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si se presenta este tipo de violencia acuda en primera instancia al sector salud o a cualquier autoridad competente del sector en el que viva y que le inspire confianza."
+                android:textSize="11sp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_animation"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:tooltipText="Justicia"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_fileName="animation_justicia3.json"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="Justicia"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_animation2"
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:tooltipText="Salud"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_fileName="animation_salud.json"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Salud"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_animation3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:tooltipText="Protección"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_fileName="animation_proteccion.json"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Protección"
+                        android:textSize="10sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -156,19 +224,18 @@
         android:layout_marginBottom="-48dp"
         android:elevation="500dp"
         android:cropToPadding="true"
-        android:paddingTop="50dp"
+        android:paddingTop="85dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/illustrated_strip" />
+        android:src="@drawable/illustrated_strip"/>
 
     <ImageView
         android:id="@+id/footer_splash"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:elevation="100dp"
-        android:layout_marginBottom="-40dp"
+        android:layout_height="170dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-40dp"
+        android:elevation="100dp"
         android:src="@drawable/splash_footer"/>
-
 </RelativeLayout>

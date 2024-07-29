@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -56,7 +57,7 @@ public class HomeFragment extends Fragment {
         itemList.add(new Item(R.drawable.psychological_violence_icon));
         itemList.add(new Item(R.drawable.pshysical_violence_icon));
         itemList.add(new Item(R.drawable.sexual_violence_icon));
-        itemList.add(new Item(R.drawable.behavior_suicide_icon));
+//        itemList.add(new Item(R.drawable.behavior_suicide_icon));
         itemList.add(new Item(R.drawable.negligence_icon));
         itemList.add(new Item(R.drawable.patriomonial_violence_icon));
 
@@ -76,6 +77,7 @@ public class HomeFragment extends Fragment {
         });
 
         iconChat = view.findViewById(R.id.chat_icon);
+        // Metodo click para direccionar a whatsapp
         iconChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,13 +104,13 @@ public class HomeFragment extends Fragment {
                     case 2:
                         fragment = new SexualFragment();
                         break;
+//                    case 3:
+//                        fragment = new SuicideFragment();
+//                        break;
                     case 3:
-                        fragment = new SuicideFragment();
-                        break;
-                    case 4:
                         fragment = new NegligenceFragment();
                         break;
-                    case 5:
+                    case 4:
                         fragment = new PatrimonialFragment();
                         break;
                 }
@@ -121,13 +123,34 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        ImageView buttonOpenDocPopup = view.findViewById(R.id.btnRoutesAtention);
+        ImageView buttonOpenDocPopup = view.findViewById(R.id.btnEmergencyCall);
         buttonOpenDocPopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                showDocOptionsPopup();
+                EmergencyFragment secondFragment = new EmergencyFragment();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, secondFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+        ImageView buttonOpenDocPopupDirectory = view.findViewById(R.id.btnRoutes);
+        buttonOpenDocPopupDirectory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDocOptionsPopup();
             }
         });
+
+        ImageView buttonOpenDocPopup2 = view.findViewById(R.id.btnRights);
+        buttonOpenDocPopup2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDocOptionsPopupDirectory();
+            }
+        });
+
 
         recyclerView.setAdapter(adapter);
 
@@ -164,12 +187,11 @@ public class HomeFragment extends Fragment {
                 .create()
                 .show();
     }
-
     private void downloadPdf() {
         try {
             // Copiar archivo PDF desde assets al almacenamiento externo
-            InputStream inputStream = getContext().getAssets().open("directory.pdf");
-            File downloadsDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "directory.pdf");
+            InputStream inputStream = getContext().getAssets().open("rutas_de_atencion.pdf");
+            File downloadsDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "rutas_de_atencion.pdf");
             FileOutputStream outputStream = new FileOutputStream(downloadsDir);
 
             byte[] buffer = new byte[1024];
@@ -187,26 +209,11 @@ public class HomeFragment extends Fragment {
             Toast.makeText(getContext(), "Error al descargar PDF", Toast.LENGTH_SHORT).show();
         }
     }
-
-    private void viewPdf() {
-        // Nombre del archivo PDF en la carpeta assets
-        String pdfFile = "directory.pdf";
-
-        // Obtener la ruta completa del archivo PDF en la carpeta assets
-        String assetPath = "file:///android_asset/" + pdfFile;
-
-        // Obtener la URI del archivo PDF utilizando FileProvider
-        Uri fileUri = Uri.parse(assetPath);
-
-        // Llamar al método para abrir el archivo PDF utilizando la URI obtenida
-        openPdfFile(fileUri);
-    }
-
     private void openPdfFile(Uri fileUri) {
         // Verificar si el URI comienza con "file:///android_asset"
         if (fileUri.toString().startsWith("file:///android_asset")) {
             // Obtener el nombre del archivo PDF
-            String pdfFileName = "directory.pdf";
+            String pdfFileName = "rutas_de_atencion.pdf";
 
             // Copiar el archivo PDF desde assets al almacenamiento interno
             File pdfFile = copyFileFromAssetsToStorage(pdfFileName);
@@ -241,6 +248,116 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getContext(), "No se encontró un visor de PDF", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    private void viewPdf() {
+        // Nombre del archivo PDF en la carpeta assets
+        String pdfFile = "rutas_de_atencion.pdf";
+
+        // Obtener la ruta completa del archivo PDF en la carpeta assets
+        String assetPath = "file:///android_asset/" + pdfFile;
+
+        // Obtener la URI del archivo PDF utilizando FileProvider
+        Uri fileUri = Uri.parse(assetPath);
+
+        // Llamar al método para abrir el archivo PDF utilizando la URI obtenida
+        openPdfFile(fileUri);
+    }
+
+    private void showDocOptionsPopupDirectory() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//        RUTAS DE ATENCION SALUD MENTAL SECRETARIA DE SALUD PASTO
+        builder.setMessage("Quieres conocer algunos de tus derechos como ciudadano?")
+                .setPositiveButton("Si y quiero guardarlos!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Lógica para descargar el archivo PDF
+                        downloadPdfDirectory();
+                    }
+                })
+                .setNegativeButton("No, quiero conocerlos ahora!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Lógica para visualizar el archivo PDF
+                        viewPdfDirectory();
+                    }
+                })
+                .create()
+                .show();
+    }
+    private void downloadPdfDirectory() {
+        try {
+            // Copiar archivo PDF desde assets al almacenamiento externo
+            InputStream inputStream = getContext().getAssets().open("mis_derechos.pdf");
+            File downloadsDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "mis_derechos.pdf");
+            FileOutputStream outputStream = new FileOutputStream(downloadsDir);
+
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
+
+            inputStream.close();
+            outputStream.close();
+
+            Toast.makeText(getContext(), "Revisa en tu carpeta Descargas.. ", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(getContext(), "Error al descargar PDF", Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void openPdfFileDirectory(Uri fileUri) {
+        // Verificar si el URI comienza con "file:///android_asset"
+        if (fileUri.toString().startsWith("file:///android_asset")) {
+            // Obtener el nombre del archivo PDF
+            String pdfFileName = "mis_derechos.pdf";
+
+            // Copiar el archivo PDF desde assets al almacenamiento interno
+            File pdfFile = copyFileFromAssetsToStorage(pdfFileName);
+
+            if (pdfFile != null) {
+                // Obtener la URI del archivo temporal utilizando FileProvider
+                Uri uri = FileProvider.getUriForFile(requireContext(),
+                        "org.pastosalud.vivesinviolencia.fileprovider", pdfFile);
+
+                // Crear un Intent para abrir el archivo PDF con una aplicación de visualización de PDF
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType(uri, "application/pdf");
+                intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                try {
+                    startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getContext(), "No se encontró un visor de PDF", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(getContext(), "Error al abrir el archivo PDF", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            // Si el URI no comienza con "file:///android_asset", continuar con la apertura normal
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(fileUri, "application/pdf");
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            try {
+                startActivity(intent);
+            } catch (ActivityNotFoundException e) {
+                Toast.makeText(getContext(), "No se encontró un visor de PDF", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    private void viewPdfDirectory() {
+        // Nombre del archivo PDF en la carpeta assets
+        String pdfFile = "routes.pdf";
+
+        // Obtener la ruta completa del archivo PDF en la carpeta assets
+        String assetPath = "file:///android_asset/" + pdfFile;
+
+        // Obtener la URI del archivo PDF utilizando FileProvider
+        Uri fileUri = Uri.parse(assetPath);
+
+        // Llamar al método para abrir el archivo PDF utilizando la URI obtenida
+        openPdfFileDirectory(fileUri);
     }
 
     private File copyFileFromAssetsToStorage(String fileName) {
